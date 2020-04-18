@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Button</title>
+    <link rel="stylesheet" href="../boostrap/bootstrap.css">
+   
+    <script src ="../js/jquery-3.5.0.min.js"></script>
+</head>
+<html>
+    <h3 >Câu 1</h3>
+    <div id="dvHiden" style="width: 150px;border: 1px solid black;">Hover để biến mất</div>
+    
+    <h3>Câu 2</h3>
+    <button type="button" id="btnCheck">Check</button>
+    <button type="button" id="btnUnCheck">Uncheck</button>
+    <button type="button" id="btnGetval">Get value</button>
+    <br />
+    <input type="checkbox" name="option" value="Apples">Apples<br />
+    <input type="checkbox" name="option" value="Oranges">Oranges<br />
+    <input type="checkbox" name="option" value="Bananas">Bananas<br />
+    <input type="checkbox" name="option" value="Melons">Melons
+    <div id="dvGet">Kết quả :</div>
+    <!--Jquety-->
+    <script>
+        //cau 1 
+        $('#dvHiden').hover(function(){
+            $(this).hide(2000);
+        });
+        //cau 2 
+        $('#btnCheck').click(function(){
+            $(':checkbox').attr('checked','checked');
+        });
+        $('#btnUnCheck').click(function(){
+            $(':checkbox').attr('checked',false);
+        });
+       
+    
+    </script>
+</html>
