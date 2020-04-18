@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <head>
-    <title>Button</title>
+    <title>Form</title>
     <link rel="stylesheet" href="../boostrap/bootstrap.css">
     <script src ="../js/jquery-3.5.0.min.js"></script>
 </head>
 
 <body>
     <form method="POST" enctype="multipart/form-data">
-        
+        <div id="No1">
+            <label for="#txtUser">Tên đăng nhập</label>
+            <input  id="txtUser">
+            <br>
+            <label for="txtPass">Mật khẩu: </label>
+            <input type="password">
+            <p class="formRight">Tối thiểu năm ký tự</p>
+            <label for="txtRePass" class = "formLeft">Gõ lại mật khẩu</label>
+            <input type="password">
+        </div>
+        <div id ="No2">
+            Hãy nhập thông tin để lấy lại mật khẩu khi bị quên <br>
+            <label for="listQuest">Câu hỏi bí mật</label>
+            <select name ="Quest" id="listQuest">
+                <option value="0">[chọn câu hỏi]</option>
+                <option value="1">Bạn thích cầu thủ nào nhất</option>
+                <option value="2">Người yêu của bạn tên là gì?</option>
+                <option value="3">Thú cưng bạn muốn nuôi nhất là :</option>
+                <option value="4">Bạn thích nhất game thủ nào?</option>
+            </select>
+            <br>
+            <label for="txtAns">Trả lời:</label>
+            <input type="text" id="txtAns">
+            <label for="slDate">Ngày sinh</label>
+            <input type="date">
+
+        </div>
+
+        <div id="No3">
+            Thông tin cá nhân <br>
+            <label for="txtFName">Họ và chữ lót: </label>
+            <input type="text" id="txtName">
+            <label for="txtName">Tên: </label>
+            <input type="text" id="txtName">
+            <br>
+            <label for="rdG">Giới tính: </label>
+            <input type="radio" name="gioi" id="rdG" >Nam
+            <input type="radio" name="gioi" id ="rdG" >Nữ
+            <br>
+            <label for="listJob">Nghề nghiệp liên quan</label>
+            <select  id="listJob">
+                <option value="0">Chọn ngành nghề</option>
+                <option value="1">Sinh Viên</option>
+                <option value="2">Giáo viên</option>
+                <option value="3">Nhân viên văn phòng</option>
+                <option value="4">Bảo vệ</option>
+            </select>
+        </div>
+        <div id ="No4">
+            Sở thích (tùy chọn)
+            <br>
+            <input type="checkbox">Âm nhạc
+            <input type="checkbox">Du lịch
+            <input type="checkbox">Nghiên cứu
+            <input type="checkbox">Kinh doanh
+        </div>
+        <button id ="btnDk" style="text-align:center">Đăng ký</button>
     </form>
+
+        <!--JQuyery-->
+        <script>
+            $(document).ready(function(){
+                
+                $('#btnDk').click(function(){
+                    alert('Bạn đã đăng ký thành công');
+                });
+                $('div').css({'border-top':'1px solid green',
+                        'border-bottom':'1px solid green',
+                        'margin':'10px',
+                        'padding':'10px',
+                        'text-align':'center',
+                        'font-weight':'bold'
+                });
+                
+                $('#No1').hover(function(){
+                    $(this).css({'background-color':'yellow',
+                            'color':'red'
+                    });
+                });
+                $('#No2').hover(function(){
+                    $(this).css({'background-color':'aqua',
+                            'color':'gold'
+                    });
+                });
+                $('#No3').hover(function(){
+                    $(this).css({'background-color':'green',
+                            'color':'blue'
+                    });
+                });
+                $('#No4').hover(function(){
+                    $(this).css({'background-color':'red',
+                            'color':'white'
+                    });
+                });
+
+            });
+        </script>
+    
 </body>
